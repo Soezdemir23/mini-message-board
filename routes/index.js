@@ -29,11 +29,27 @@ router.get('/', function(req, res, next) {
     });
 });
 
+// *GET new message.
+router.get('/new', function(req, res, next) {
+  res.render('form', {title: 'New Post'} )
+});
+
+
+// POST submit new message
+router.post("/new", function(req, res, next) {
+  messages.push({
+    text: req.body.comment,
+    comment: req.body.user,
+    added: new Date()
+  })
+  res.redirect('/')
+})
+
+
+
+
 
 
 module.exports = router;
 
-router.get('/new', function(req, res, next) {
-  res.render('new', {title: 'New Post'} )
-});
 

@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1 New Post
+    form(action="/new", method="post") 
+        h3 Enter your comment: 
+        div 
+           label(for="user") Name 
+           input#user(type="text", name="user")
+        div 
+           label(for="comment") Comment
+           input#comment(type="text", name="comment")
+        input(type="submit", value="Submit")  
