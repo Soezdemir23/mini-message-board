@@ -13,7 +13,7 @@ const messages = [
     added: new Date()
   },
   {
-    text: "Ich heiße Serdar Özdemir.\nYo hablo espanol, also english, and a tad bit of turkish.",
+    text: "Ich bin der Soezdemir, oder galaxine.\nYo hablo espanol, also english, and a tad bit of turkish.",
     user: "Serdar",
     added: new Date()
   }
