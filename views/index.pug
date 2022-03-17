@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div
+    h1= title
+    p Welcome to the #{title}
+  div 
+    h2 Current messages:
+    each message in messages
+      
+      div 
+        h5 on #{message.added}  #{message.user} wrote:
+        p= message.text
+      hr

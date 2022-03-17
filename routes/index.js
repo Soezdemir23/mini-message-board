@@ -9,7 +9,12 @@ const messages = [
   },
   {
     text: "Hello World",
-    user: "Amando",
+    user: "Mikando",
+    added: new Date()
+  },
+  {
+    text: "Ich heiße Serdar Özdemir.\nYo hablo espanol, also english, and a tad bit of turkish.",
+    user: "Serdar",
     added: new Date()
   }
 ];
@@ -18,7 +23,10 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index',
+    { title: 'Mini Messagebaord',
+      messages: messages 
+    });
 });
 
 
